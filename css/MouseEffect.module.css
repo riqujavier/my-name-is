@@ -1,0 +1,22 @@
+/* styles/globals.css */
+.cursor-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2); /* Círculo semitransparente */
+    pointer-events: none; /* Evita que el círculo interfiera con los eventos del ratón */
+    transform: translate(-50%, -50%); /* Centra el círculo en la posición del puntero */
+    transition: all 0.1s ease; /* Suaviza el movimiento */
+  }
+  
+  .cursor-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: black; /* Punto negro */
+  }

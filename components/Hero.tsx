@@ -4,7 +4,7 @@ import styles from '../css/Hero.module.css';
 const Hero: React.FC = () => {
     return (
         <div className="text-white py-20">
-            <div className="container mx-auto px-6 text-center">
+            <div className="container mx-auto px-6">
                 <div className={styles.container}>
                     I'm
                     <div className={styles.stack} style={{ '--stacks': 3 } as React.CSSProperties}>
