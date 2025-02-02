@@ -10,7 +10,7 @@
   100% { transform: translateY(0); opacity: 1; }
 }
 
-main {
+body {
   &:before {
     content: "";
     height: 100vh;

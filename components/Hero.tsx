@@ -3,7 +3,7 @@ import styles from "../css/Hero.module.css";
 
 const Hero: React.FC = () => {
     return (
-        <div className="container-hero text-white py-20">
+        <div className="container-hero text-grey-400 dark:text-white py-8 font-[Blorado]">
             <div className= {styles.app}>
                 <div className={styles.wrapper}>
                 
