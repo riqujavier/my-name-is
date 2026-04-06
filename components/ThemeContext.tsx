@@ -4,16 +4,35 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 type ColorTheme = 'midnight' | 'ocean' | 'emerald' | 'ruby';
 type GlassStyle = 'soft' | 'heavy' | 'solid';
 
+interface ThemeClasses {
+    textGradient: string;
+    buttonStyle: string;
+    buttonStroke: string;
+    iconStyle: string;
+}
+
+interface GlassClasses {
+    card: string;
+    hover: string;
+}
+
 export const ThemeContext = createContext<{
   colorTheme: ColorTheme;
   setColorTheme: (v: ColorTheme) => void;
   glassStyle: GlassStyle;
   setGlassStyle: (v: GlassStyle) => void;
-  themeClasses: any;
-  glassClasses: any;
-}>(null as any);
+  themeClasses: ThemeClasses;
+  glassClasses: GlassClasses;
+}>({
+  colorTheme: 'midnight',
+  setColorTheme: () => {},
+  glassStyle: 'soft',
+  setGlassStyle: () => {},
+  themeClasses: { textGradient: '', buttonStyle: '', buttonStroke: '', iconStyle: '' },
+  glassClasses: { card: '', hover: '' },
+});
 
-const themeMap = {
+const themeMap: Record<ColorTheme, ThemeClasses> = {
     midnight: {
         textGradient: "text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500",
         buttonStyle: "bg-indigo-600 hover:bg-indigo-500 shadow-[0_0_15px_rgba(79,70,229,0.3)] border-indigo-400/30",
@@ -38,9 +57,9 @@ const themeMap = {
         buttonStroke: "border-rose-400/30",
         iconStyle: "text-rose-400"
     }
-}
+};
 
-const glassMap = {
+const glassMap: Record<GlassStyle, GlassClasses> = {
     soft: {
         card: "bg-white/5 backdrop-blur-md border border-white/10 shadow-lg",
         hover: "hover:bg-white/[0.07] hover:border-white/20"
@@ -53,7 +72,7 @@ const glassMap = {
         card: "bg-[#13111C] border border-[#2D2A3B] shadow-xl", 
         hover: "hover:bg-[#1C1A27] hover:border-[#3E3A52]"
     }
-}
+};
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [colorTheme, setColorTheme] = useState<ColorTheme>('midnight');
