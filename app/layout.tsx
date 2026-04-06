@@ -1,26 +1,47 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { LanguageProvider } from "../components/LanguageContext";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Navbar from '@/components/Navbar'
+import { LanguageProvider } from '@/components/LanguageContext'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Javier Riquelme",
-  description: "I'm Javier Riquelme and I'm a web developer.",
-};
+  title: 'Javier Riquelme | Frontend Developer',
+  description: 'Portfolio of Javier Riquelme, Frontend Developer specializing in React, Next.js, and Magnolia CMS.',
+  openGraph: {
+    title: 'Javier Riquelme | Frontend Developer',
+    description: 'Portfolio of Javier Riquelme, Frontend Developer specializing in React, Next.js, and Magnolia CMS.',
+    url: 'https://javier-riquelme.vercel.app',
+    siteName: 'Javier Riquelme Portfolio',
+    images: [
+      {
+        url: 'https://javier-riquelme.vercel.app/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Javier Riquelme Portfolio Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="bg-gray-900 text-white min-h-screen">
+    <html lang="en" className="scroll-smooth bg-[#06060c]">
+      <body className={`${inter.className} text-white min-h-screen relative`}>
         <LanguageProvider>
           <Navbar />
-          <main className="max-w-5xl mx-auto px-4 md:px-8 pt-24 pb-12">
+          <main className="pt-20">
             {children}
           </main>
-          <Footer />
         </LanguageProvider>
       </body>
     </html>
-  );
+  )
 }

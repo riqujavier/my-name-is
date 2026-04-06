@@ -8,16 +8,14 @@ const projects = [
         description: {
             en: 'Built custom frontend components using JavaScript, HTML, and CSS tailored and integrated for Magnolia CMS environments.',
             es: 'Creación de componentes Frontend personalizados usando JavaScript, HTML y CSS diseñados e integrados para entornos Magnolia CMS.'
-        },
-        link: '#'
+        }
     },
     {
         title: 'Task Manager App',
         description: {
             en: 'A responsive single-page application built with React, leveraging Local Storage for state persistence and optimal performance.',
             es: 'Una aplicación responsiva de una sola página construida con React, aprovechando Local Storage para la persistencia de estado y un rendimiento óptimo.'
-        },
-        link: '#'
+        }
     }
 ];
 
@@ -32,13 +30,13 @@ const Projects: React.FC = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto gap-8">
                     {projects.map((project, index) => (
-                        <div key={index} className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group flex flex-col h-full">
-                            <h3 className="text-2xl font-semibold mb-3 text-white group-hover:text-indigo-300 transition-colors">{project.title}</h3>
+                        <div key={index} className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex flex-col h-full cursor-default">
+                            <h3 className="text-2xl font-semibold mb-3 text-white transition-colors">{project.title}</h3>
                             <p className="text-gray-400 mb-6 leading-relaxed font-light flex-grow">{project.description[language]}</p>
-                            <a href={project.link} className="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition-colors mt-auto w-fit">
-                                {t('projects_learn_more')}
-                                <svg className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </a>
+                            <div className="inline-flex items-center text-slate-400 font-medium text-sm mt-auto w-fit py-1.5 px-3 bg-white/5 rounded-md pointer-events-none mt-4 border border-white/5">
+                                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                                {t('projects_private')}
+                            </div>
                         </div>
                     ))}
                 </div>
