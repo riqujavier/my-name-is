@@ -15,26 +15,32 @@ const translations = {
     nav_projects: 'Projects',
     nav_contact: 'Contact',
     hero_title: "I'm Javier Riquelme",
-    hero_subtitle: "Crafting modern web experiences.",
-    about_title: "About Me",
-    about_p1: "Hello! I'm Javier, a passionate developer who loves blending engaging narratives with beautiful user interfaces.",
-    about_p2: "Instead of a traditional CV, I prefer to let my work speak for itself. I focus on creating intuitive, performant, and stunning applications that leave a lasting impression.",
-    about_p3: "Whether I'm debugging complex logic or polishing pixel-perfect designs, I strive to grow and learn every single day.",
+    hero_subtitle: "Frontend Developer | React & Next.js",
+    about_title: "My Journey",
+    about_p1: "Hello! I'm Javier, a passionate Frontend Developer based in Buenos Aires. I specialize in building scalable, accessible, and high-performance web applications using React and modern JavaScript.",
+    about_p2: "Currently, I work as a Frontend Developer at The8Agency, where I develop reusable components for production environments and integrate them with Magnolia CMS. My focus is always on performance, clean architecture, and delivering responsive, user-focused solutions.",
+    about_p3: "Before transitioning fully to Frontend, my background in IT support gave me a strong foundation in problem-solving. Whether I'm collaborating with design and backend teams or optimizing accessibility (WCAG), I am constantly growing and eager for new challenges.",
     projects_title: "Featured Projects",
-    projects_learn_more: "Learn more"
+    projects_learn_more: "Learn more",
+    contact_title: "Let's Connect",
+    contact_desc: "Whether you have a question or just want to collaborate, my inbox is open!",
+    contact_btn: "Send Email"
   },
   es: {
     nav_about: 'Sobre Mí',
     nav_projects: 'Proyectos',
     nav_contact: 'Contacto',
     hero_title: "Soy Javier Riquelme",
-    hero_subtitle: "Creando experiencias web modernas.",
-    about_title: "Sobre Mí",
-    about_p1: "¡Hola! Soy Javier, un desarrollador apasionado al que le encanta combinar narrativas atractivas con hermosas interfaces de usuario.",
-    about_p2: "En lugar de un CV tradicional, prefiero que mi trabajo hable por sí mismo. Me concentro en crear aplicaciones intuitivas, rápidas e impresionantes que dejen una huella.",
-    about_p3: "Ya sea depurando lógica compleja o puliendo diseños perfectos, me esfuerzo por crecer y aprender todos los días.",
+    hero_subtitle: "Frontend Developer | React & Next.js",
+    about_title: "Mi Historia",
+    about_p1: "¡Hola! Soy Javier, un desarrollador Frontend apasionado radicado en Buenos Aires. Me especializo en construir aplicaciones web escalables, accesibles y de alto rendimiento utilizando React y JavaScript moderno.",
+    about_p2: "Actualmente trabajo como Desarrollador Frontend en The8Agency, donde desarrollo componentes reutilizables y los integro con Magnolia CMS. Mi enfoque siempre está en el rendimiento, la arquitectura limpia y en entregar soluciones responsivas orientadas al usuario.",
+    about_p3: "Antes de dedicarme por completo al Frontend, mi experiencia en soporte IT me brindó una sólida base en resolución de problemas. Ya sea colaborando con equipos de diseño y backend u optimizando la accesibilidad (WCAG), busco crecer constantemente y enfrentar nuevos desafíos.",
     projects_title: "Proyectos Destacados",
-    projects_learn_more: "Más información"
+    projects_learn_more: "Más información",
+    contact_title: "Hablemos",
+    contact_desc: "Ya sea para una oportunidad laboral o simplemente para saludar, ¡mi bandeja de entrada está abierta!",
+    contact_btn: "Enviar Email"
   }
 };
 

@@ -20,6 +20,9 @@ const Navbar: React.FC = () => {
                         <li>
                             <a href="#projects" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">{t('nav_projects')}</a>
                         </li>
+                        <li>
+                            <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">{t('nav_contact')}</a>
+                        </li>
                     </ul>
                     <button 
                         onClick={toggleLanguage}

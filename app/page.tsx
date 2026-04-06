@@ -2,6 +2,7 @@ import MouseEffect from "@/components/MouseEffect";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
       </div>
       <div id="projects" className="scroll-mt-32 min-h-screen">
         <Projects />
+      </div>
+      <div id="contact" className="scroll-mt-32">
+        <Contact />
       </div>
     </div>
   )
