@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import { LanguageProvider } from '@/components/LanguageContext'
+import { ThemeProvider } from '@/components/ThemeContext'
+import ThemeCustomizer from '@/components/ThemeCustomizer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,12 +37,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth bg-[#06060c]">
       <body className={`${inter.className} text-white min-h-screen relative`}>
-        <LanguageProvider>
-          <Navbar />
-          <main className="pt-20">
-            {children}
-          </main>
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            <Navbar />
+            <ThemeCustomizer />
+            <main className="pt-20">
+              {children}
+            </main>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
