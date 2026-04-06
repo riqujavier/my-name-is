@@ -1,9 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import { useLanguage } from './LanguageContext';
+import { useTheme } from './ThemeContext';
 
 const Contact: React.FC = () => {
     const { t } = useLanguage();
+    const { themeClasses, glassClasses } = useTheme();
     const [status, setStatus] = useState<string | null>(null);
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -15,11 +17,11 @@ const Contact: React.FC = () => {
 
     return (
         <section className="py-24 relative z-10 flex justify-center items-center px-4">
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)] rounded-3xl p-8 md:p-12 max-w-5xl w-full transition-all duration-300 hover:bg-white/[0.07]">
+            <div className={`${glassClasses.card} ${glassClasses.hover} rounded-3xl p-8 md:p-12 max-w-5xl w-full transition-all duration-300`}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
                     {/* Left Column: Info & Links */}
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                        <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${themeClasses.textGradient}`}>
                             {t('contact_title')}
                         </h2>
                         <p className="text-gray-300 text-lg mb-10 leading-relaxed font-light">
@@ -52,7 +54,7 @@ const Contact: React.FC = () => {
                                 <label className="block text-sm font-medium text-gray-400 mb-1.5 pl-1">{t('form_message')}</label>
                                 <textarea required rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all placeholder-gray-600 resize-none" placeholder="Hello..."></textarea>
                             </div>
-                            <button type="submit" className="mt-4 w-full px-6 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 border border-indigo-400/30 transition-all duration-300 text-white font-medium shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:shadow-[0_0_20px_rgba(79,70,229,0.5)]">
+                            <button type="submit" className={`mt-4 w-full px-6 py-4 rounded-xl ${themeClasses.buttonStyle} ${glassClasses.card} transition-all duration-300 text-white font-medium`}>
                                 {t('contact_btn')}
                             </button>
                             {status && <p className="text-emerald-400 text-sm font-medium text-center mt-2 animate-pulse">{status}</p>}
