@@ -1,24 +1,33 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from './LanguageContext';
 
 const Navbar: React.FC = () => {
+    const { language, toggleLanguage, t } = useLanguage();
+
     return (
-        <nav className="bg-gray-800 p-4">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="text-white text-sm font-bold">
-                    <Link href="/">MyPortfolio</Link>
+        <nav className="fixed top-0 w-full z-50 bg-gray-900/40 backdrop-blur-xl border-b border-white/10 shadow-lg">
+            <div className="max-w-5xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+                <div className="text-white text-xl font-bold tracking-tight hover:text-indigo-400 transition-colors">
+                    <Link href="/">JR</Link>
                 </div>
-                <ul className="flex space-x-4">
-                    <li>
-                        <Link href="/about" className="text-white hover:text-gray-400">About</Link>
-                    </li>
-                    <li>
-                        <Link href="/projects" className="text-white hover:text-gray-400">Projects</Link>
-                    </li>
-                    <li>
-                        <Link href="/contact" className="text-white hover:text-gray-400">Contact</Link>
-                    </li>
-                </ul>
+                <div className="flex items-center gap-6">
+                    <ul className="hidden md:flex space-x-8">
+                        <li>
+                            <a href="#about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">{t('nav_about')}</a>
+                        </li>
+                        <li>
+                            <a href="#projects" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">{t('nav_projects')}</a>
+                        </li>
+                    </ul>
+                    <button 
+                        onClick={toggleLanguage}
+                        className="px-3 py-1 rounded-full border border-white/20 text-xs font-bold bg-white/5 hover:bg-white/10 transition-colors uppercase tracking-wider"
+                    >
+                        {language === 'en' ? 'ES' : 'EN'}
+                    </button>
+                </div>
             </div>
         </nav>
     );
