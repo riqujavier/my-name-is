@@ -16,7 +16,7 @@ const ThemeCustomizer = () => {
                     <div className="mb-5">
                         <label className="text-xs text-gray-400 mb-2 block">Primary Color</label>
                         <div className="flex gap-2">
-                            <button onClick={() => setColorTheme('midnight')} className={`w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 border-2 transition-transform ${colorTheme === 'midnight' ? 'border-white scale-110' : 'border-transparent'}`} />
+                            <button onClick={() => setColorTheme('midnight')} className={`w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-400 border-2 transition-transform ${colorTheme === 'midnight' ? 'border-white scale-110' : 'border-transparent'}`} />
                             <button onClick={() => setColorTheme('ocean')} className={`w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 border-2 transition-transform ${colorTheme === 'ocean' ? 'border-white scale-110' : 'border-transparent'}`} />
                             <button onClick={() => setColorTheme('emerald')} className={`w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-teal-400 border-2 transition-transform ${colorTheme === 'emerald' ? 'border-white scale-110' : 'border-transparent'}`} />
                             <button onClick={() => setColorTheme('ruby')} className={`w-8 h-8 rounded-full bg-gradient-to-br from-rose-400 to-orange-400 border-2 transition-transform ${colorTheme === 'ruby' ? 'border-white scale-110' : 'border-transparent'}`} />

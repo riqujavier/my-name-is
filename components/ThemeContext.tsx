@@ -34,7 +34,7 @@ export const ThemeContext = createContext<{
 
 const themeMap: Record<ColorTheme, ThemeClasses> = {
     midnight: {
-        textGradient: "text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500",
+        textGradient: "text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400",
         buttonStyle: "bg-indigo-600 hover:bg-indigo-500 shadow-[0_0_15px_rgba(79,70,229,0.3)] border-indigo-400/30",
         buttonStroke: "border-indigo-400/30",
         iconStyle: "text-indigo-400"
